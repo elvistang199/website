@@ -52,7 +52,7 @@ nav ul a {
   margin-top: 20px;
 }
 .about-grid img {
-  width: 200px;
+  width: auto;
   height: auto;
   border-radius: 10px;
 }
