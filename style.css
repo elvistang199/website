@@ -74,13 +74,12 @@ button {
   cursor: pointer;
   border-radius: 5px;
 }
-.preview {
-  margin-top: 15px;
-}
-iframe, img {
+
+.preview iframe {
   width: 100%;
-  max-height: 1000px;
+  aspect-ratio: 16 / 9; /* Responsive ratio */
   border: none;
+  margin-top: 10px;
 }
 
 /* Resume */
