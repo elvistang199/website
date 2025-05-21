@@ -52,9 +52,9 @@ nav ul a {
   margin-top: 20px;
 }
 .about-grid img {
-  width: auto;
+  width: 200px;
   height: auto;
-  border-radius: auto;
+  border-radius: 10px;
 }
 
 /* Projects */
