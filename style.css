@@ -54,7 +54,7 @@ nav ul a {
 .about-grid img {
   width: auto;
   height: auto;
-  border-radius: 10px;
+  border-radius: auto;
 }
 
 /* Projects */
