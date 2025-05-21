@@ -5,7 +5,7 @@ document.querySelectorAll("button").forEach((btn) => {
     const url = btn.getAttribute("data-url");
 
     if (preview.innerHTML.trim() !== "") {
-      preview.innerHTML = "";
+      preview.innerHTML = ""; // toggle off
       return;
     }
 
@@ -15,7 +15,9 @@ document.querySelectorAll("button").forEach((btn) => {
     } else if (type === "image") {
       content = `<img src="${url}" alt="Project image" />`;
     } else if (type === "youtube") {
-      content = `<iframe src="${url}" allowfullscreen></iframe>`;
+      content = `<iframe width="560" height="315" src="${url}" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>`;
     }
 
     preview.innerHTML = content;
