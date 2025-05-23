@@ -92,11 +92,33 @@ button {
 }
 
 /* Resume */
+#resume {
+  text-align: center;
+}
 #resume iframe {
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* Default for desktop */
+  max-width: 100%;
   border: none;
+  display: block;
+  margin: 0 auto;
 }
+
+/* Responsive iframe height for mobile */
+@media (max-width: 768px) {
+  #resume iframe {
+    height: 80vh; /* Reduce height for better fit */
+  }
+}
+
+@media (max-width: 480px) {
+  #resume iframe {
+    height: 70vh;
+    width: 100%;
+    padding: 0 10px; /* Add slight padding to avoid edge cuts */
+  }
+}
+
 
 /* Contact */
 #contact ul {
