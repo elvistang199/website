@@ -152,10 +152,19 @@ footer {
   nav ul {
     flex-direction: column;
     padding: 0;
+    align-items: center; /* Center nav items horizontally */
   }
 
   nav ul li {
     margin: 10px 0;
+    text-align: center; /* Center nav link text */
+    width: 100%;
+  }
+
+  nav ul a {
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 
   button {
@@ -177,8 +186,21 @@ footer {
     height: 50vh !important;
   }
 
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+    align-items: center; /* Center nav items */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    text-align: center; /* Center text in nav items */
+    width: 100%;
+  }
+
   nav ul a {
     font-size: 1rem;
+    display: block; /* Makes links fill the li and align properly */
   }
 
   .about-grid img {
