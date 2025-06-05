@@ -21,9 +21,9 @@ document.querySelectorAll('.project-card button').forEach(button => {
 // Toggle Music Sidebar
 const toggleBtn = document.createElement('button');
 toggleBtn.textContent = '🎵';
-toggleBtn.style.position = 'fixed';
+toggleBtn.style.position = 'sticky';
 toggleBtn.style.top = '100px';
-toggleBtn.style.right = '0';
+toggleBtn.style.right = '100px';
 toggleBtn.style.zIndex = '1000';
 toggleBtn.style.padding = '10px';
 toggleBtn.style.backgroundColor = '#007BFF';
