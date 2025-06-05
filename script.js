@@ -1,5 +1,5 @@
 <script>
-  // Preview buttons logic
+  // Preview button logic (for project previews)
   document.querySelectorAll("button").forEach((btn) => {
     btn.addEventListener("click", () => {
       const preview = btn.nextElementSibling;
@@ -9,7 +9,7 @@
       if (!type || !url) return;
 
       if (preview.innerHTML.trim() !== "") {
-        preview.innerHTML = ""; // toggle off
+        preview.innerHTML = "";
         return;
       }
 
@@ -28,7 +28,7 @@
     });
   });
 
-  // Music toggle logic with swipe-to-close
+  // Music toggle and swipe-to-close
   document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("toggleMusic");
     const musicPanel = document.getElementById("musicPanel");
@@ -38,9 +38,8 @@
         musicPanel.classList.toggle("open");
       });
 
-      // Swipe detection variables
-      let startX = 0;
-      let endX = 0;
+      // Swipe to close
+      let startX = 0, endX = 0;
 
       musicPanel.addEventListener("touchstart", (e) => {
         startX = e.touches[0].clientX;
@@ -53,7 +52,6 @@
       musicPanel.addEventListener("touchend", () => {
         const deltaX = endX - startX;
         if (deltaX < -50) {
-          // Swiped left
           musicPanel.classList.remove("open");
         }
       });
