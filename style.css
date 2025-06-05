@@ -108,18 +108,26 @@ button {
 /* Music Toggle Button */
 #toggleMusic {
   position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+  top: 100px;
+  right: 10px;
   background-color: #007BFF;
   color: white;
   border: none;
-  border-radius: 10px 0 0 10px;
-  padding: 10px 15px;
+  border-radius: 50%;
+  padding: 12px 16px;
+  font-size: 1.5rem;
   cursor: pointer;
-  z-index: 1001;
-  display: none; /* Hidden by default */
+  z-index: 9999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 480px) {
+  #toggleMusic {
+    padding: 10px 14px;
+    font-size: 1.2rem;
+  }
+}
+
 
 /* Slide-in Music Panel */
 .music-projects {
@@ -156,6 +164,15 @@ button {
     height: 100vh;
     z-index: 1000;
   }
+}
+
+.music-projects {
+  transition: right 0.3s ease-in-out;
+  right: -320px; /* Hidden by default */
+}
+
+.music-projects.visible {
+  right: 0; /* Slide in when visible */
 }
 
 /* Resume */
