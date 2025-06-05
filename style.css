@@ -119,19 +119,30 @@ button {
 .track audio {
   width: 100%;
 }
-/* Toggle Button */
-.toggle-music-btn {
+/* Vertical Music Toggle Button */
+.toggle-music-btn-vertical {
   position: fixed;
-  right: 1rem;
-  top: 1rem;
-  z-index: 1001;
-  padding: 10px 15px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
   background-color: #007BFF;
   color: white;
   border: none;
-  border-radius: 8px;
+  padding: 0.5rem 0.4rem;
   cursor: pointer;
   font-size: 1rem;
+  border-radius: 8px 0 0 8px;
+  z-index: 1001;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .toggle-music-btn-vertical {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.3rem;
+  }
 }
 /* Sidebar */
 .music-projects {
