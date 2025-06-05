@@ -1,25 +1,41 @@
-document.querySelectorAll("button").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const preview = btn.nextElementSibling;
-    const type = btn.getAttribute("data-type");
-    const url = btn.getAttribute("data-url");
+// Project Preview Button Functionality
+document.querySelectorAll('.project-card button').forEach(button => {
+  button.addEventListener('click', function () {
+    const preview = this.nextElementSibling;
+    const type = this.getAttribute('data-type');
+    const url = this.getAttribute('data-url');
 
-    if (preview.innerHTML.trim() !== "") {
-      preview.innerHTML = ""; // toggle off
-      return;
+    let embed = '';
+    if (type === 'youtube') {
+      embed = `<iframe src="${url}" allowfullscreen></iframe>`;
+    } else if (type === 'image') {
+      embed = `<img src="${url}" alt="Project Preview" style="max-width:100%; border-radius:10px;">`;
+    } else if (type === 'doc') {
+      embed = `<iframe src="${url}" allowfullscreen></iframe>`;
     }
 
-    let content = "";
-    if (type === "doc") {
-      content = <iframe src="${url}" height="500"></iframe>;
-    } else if (type === "image") {
-      content = <img src="${url}" alt="Project image" />;
-    } else if (type === "youtube") {
-      content = <iframe width="560" height="315" src="${url}" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>;
-    }
-
-    preview.innerHTML = content;
+    preview.innerHTML = embed;
   });
+});
+
+// Toggle Music Sidebar
+const toggleBtn = document.createElement('button');
+toggleBtn.textContent = '🎵 Music';
+toggleBtn.style.position = 'fixed';
+toggleBtn.style.top = '100px';
+toggleBtn.style.right = '0';
+toggleBtn.style.zIndex = '1000';
+toggleBtn.style.padding = '10px';
+toggleBtn.style.backgroundColor = '#007BFF';
+toggleBtn.style.color = 'white';
+toggleBtn.style.border = 'none';
+toggleBtn.style.borderRadius = '5px 0 0 5px';
+toggleBtn.style.cursor = 'pointer';
+
+document.body.appendChild(toggleBtn);
+
+const musicPanel = document.getElementById('musicPanel');
+
+toggleBtn.addEventListener('click', () => {
+  musicPanel.classList.toggle('open');
 });
