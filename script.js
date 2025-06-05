@@ -47,3 +47,14 @@ const musicPanel = document.getElementById("musicPanel");
 toggleButton.addEventListener("click", () => {
   musicPanel.classList.toggle("open");
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleMusicButton = document.getElementById("toggleMusic");
+  const musicPanel = document.getElementById("musicPanel");
+
+  if (toggleMusicButton && musicPanel) {
+    toggleMusicButton.addEventListener("click", function () {
+      musicPanel.classList.toggle("visible");
+    });
+  }
+});
