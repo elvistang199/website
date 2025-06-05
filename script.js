@@ -20,7 +20,7 @@ document.querySelectorAll('.project-card button').forEach(button => {
 
 // Toggle Music Sidebar
 const toggleBtn = document.createElement('button');
-toggleBtn.textContent = '🎵';
+toggleBtn.textContent = '🎵 Music';
 toggleBtn.style.position = 'fixed';
 toggleBtn.style.top = '100px';
 toggleBtn.style.right = '0';
