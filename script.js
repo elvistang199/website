@@ -39,11 +39,3 @@ const musicPanel = document.getElementById('musicPanel');
 toggleBtn.addEventListener('click', () => {
   musicPanel.classList.toggle('open');
 });
-
-// Music panel toggle
-const toggleButton = document.getElementById("toggleMusic");
-const musicPanel = document.getElementById("musicPanel");
-
-toggleButton.addEventListener("click", () => {
-  musicPanel.classList.toggle("open");
-});
