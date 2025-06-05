@@ -148,7 +148,7 @@ button {
 @media (max-width: 480px) {
   #resume iframe {
     height: 70vh;
-    width: 1px;
+    width: 100%;
     padding: 0 10px; /* Add slight padding to avoid edge cuts */
   }
 }
