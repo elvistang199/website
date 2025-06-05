@@ -20,7 +20,7 @@ document.querySelectorAll('.project-card button').forEach(button => {
 
 // Toggle Music Sidebar
 const toggleBtn = document.createElement('button');
-toggleBtn.textContent = '🎵 Music';
+toggleBtn.textContent = '🎵';
 toggleBtn.style.position = 'fixed';
 toggleBtn.style.top = '100px';
 toggleBtn.style.right = '0';
@@ -38,4 +38,12 @@ const musicPanel = document.getElementById('musicPanel');
 
 toggleBtn.addEventListener('click', () => {
   musicPanel.classList.toggle('open');
+});
+
+// Music panel toggle
+const toggleButton = document.getElementById("toggleMusic");
+const musicPanel = document.getElementById("musicPanel");
+
+toggleButton.addEventListener("click", () => {
+  musicPanel.classList.toggle("open");
 });
