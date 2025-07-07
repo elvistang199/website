@@ -29,6 +29,18 @@ header {
   text-align: center;
 }
 
+/* Preview buttons */
+.preview {
+  transition: all 0.3s ease;
+}
+
+.preview iframe,
+.preview img {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+
 /* Navigation */
 nav {
   background-color: #007BFF;
