@@ -1,10 +1,17 @@
-// Project Preview Button Functionality
+// Project Preview Button Functionality (Fixed)
 document.querySelectorAll('.project-card button').forEach(button => {
   button.addEventListener('click', function () {
     const preview = this.nextElementSibling;
     const type = this.getAttribute('data-type');
     const url = this.getAttribute('data-url');
 
+    // Toggle logic: If preview already has content, clear it
+    if (preview.innerHTML.trim() !== '') {
+      preview.innerHTML = '';
+      return; // exit early
+    }
+
+    // Otherwise, show the content
     let embed = '';
     if (type === 'youtube') {
       embed = `<iframe src="${url}" allowfullscreen></iframe>`;
@@ -17,6 +24,7 @@ document.querySelectorAll('.project-card button').forEach(button => {
     preview.innerHTML = embed;
   });
 });
+
 
 // Toggle Music Sidebar
 const toggleBtn = document.createElement('button');
